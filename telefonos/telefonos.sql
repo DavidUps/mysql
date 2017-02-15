@@ -11,9 +11,25 @@ create table CLIENTES(
 	Nombre varchar(20) Not Null,
 	Apellido varchar(20) Not Null,
 	Telefono char(9) Not Null,
-	Email varchar(10) Not Null,
+	Email varchar(40) Not Null,
 	primary key (DNI)
 );
+
+insert into CLIENTES (DNI, Nombre, Apellido, Telefono, Email)
+	values ('023213Y','David', 'Arribas', '619238923', 'davidarribasc@gmial.com');
+
+insert into CLIENTES (DNI, Nombre, Apellido, Telefono, Email)
+	values ('232334F','Paco', 'Jhones', '612374582', 'pacojhones@gmail.com');
+
+insert into CLIENTES (DNI, Nombre, Apellido, Telefono, Email)
+	values ('675756F','Fernando', 'Macedonio', '987345983', 'fernandomacedonio@gmail.com');
+
+insert into CLIENTES (DNI, Nombre, Apellido, Telefono, Email)
+	values ('873483F','José', 'Fino', '612373442', 'joselfino@gmail.com');
+
+insert into CLIENTES (DNI, Nombre, Apellido, Telefono, Email)
+	values ('988932F','Esther', 'Aguas', '6134455582', 'estheraguas@gmail.com');
+
 
 Drop table if exists TIENDAS;
 
@@ -25,10 +41,19 @@ create table TIENDAS(
 	Telefono char(9) Not Null,
 	DíaApertura varchar(20) Not Null default 'Lunes-Sabado',
 	DíaCierre varchar(20) Not Null default 'Domingo',
-	HoraApertura time Not Null default '09:00:00',
-	HoraCierre time Not Null default '21:00:00',
+	HoraApertura time Not Null default '10:00:00',
+	HoraCierre time Not Null default '20:00:00',
 	primary key (Nombre)
 );
+
+insert into TIENDAS (Nombre, Provincia, Localidad, Dirección, Telefono, DíaApertura, DíaCierre, HoraApertura, HoraCierre)
+	values ('TelePhone', 'Madrid', 'Madrid', 'avenida del telefono', '987654321', 'Lunes', 'Domingo','10:00:00', '20:00:00');
+
+insert into TIENDAS (Nombre, Provincia, Localidad, Dirección, Telefono, DíaApertura, DíaCierre, HoraApertura, HoraCierre)
+	values ('Pepenophone', 'Barcelona', 'Barcelona', 'avenida del pequeñotelefono', '987698321', 'Lunes', 'viernes', '10:00:00', '20:00:00');
+
+insert into TIENDAS (Nombre, Provincia, Localidad, Dirección, Telefono, DíaApertura, DíaCierre, HoraApertura, HoraCierre)
+	values ('ElTelefonoDePepe', 'Valencia', 'Valencia', 'Calle de la conexion', '987234321', 'Lunes', 'Martes', '10:00:00', '20:00:00');
 
 Drop table if exists OPERADORAS;
 
@@ -40,6 +65,21 @@ create table OPERADORAS(
 	PaginaWeb varchar(30) Not Null,
 	primary key (Nombre)
 );
+
+insert into OPERADORAS(Nombre, ColorLogo, PorcentajeCobertura, FrecuenciaGSM, PaginaWeb)
+	values ('Vodofone', 'rojo', '20%', '380', 'Vodofone.com' );
+
+insert into OPERADORAS(Nombre, ColorLogo, PorcentajeCobertura, FrecuenciaGSM, PaginaWeb)
+	values ('Naranja', 'naranja', '40%', '410', 'Naranja.com' );
+	
+insert into OPERADORAS(Nombre, ColorLogo, PorcentajeCobertura, FrecuenciaGSM, PaginaWeb)
+	values ('Moviteorito', 'azul', '22%', '450', 'Moviteorito.com' );
+	
+insert into OPERADORAS(Nombre, ColorLogo, PorcentajeCobertura, FrecuenciaGSM, PaginaWeb)
+	values ('FreeMovil', 'morado', '70%', '750', 'FreeMovil.com' );
+	
+insert into OPERADORAS(Nombre, ColorLogo, PorcentajeCobertura, FrecuenciaGSM, PaginaWeb)
+	values ('UbuntuPhone', 'naranja', '100%', '1900', 'Ubuntu.com' );
 
 Drop table if exists TARIFAS;
 
