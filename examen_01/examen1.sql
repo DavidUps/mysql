@@ -46,6 +46,10 @@ insert into ESPECIE (nomcientifico, nomvulgar, familia, peligro)
 insert into ANIMAL(nomzoo, nomespecie, sexo,anonacimiento,pais,continente)
 	values("Zoo Madrid","Pantera","Masculino","2013","India","Asia");
 
+/* Cambiar datos*/
+
+update ZOO set nombre="Zoo Madrid-Vodafone" where nombre="Zoo Madrid";
+
 /* Ver que tienen */
 
 select * from ZOO;
